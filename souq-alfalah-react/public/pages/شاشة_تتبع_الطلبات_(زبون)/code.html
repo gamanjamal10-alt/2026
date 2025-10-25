@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>طلباتي</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3fd411",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#142210",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col bg-white dark:bg-black/20 p-4 border-l border-gray-200 dark:border-gray-800">
+<div class="flex flex-col gap-4 flex-grow">
+<div class="flex items-center gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGt4TrFsa3NVdNgQPe3nyGeg5welge-Y5UXLnFozu6qy4k-fWeXbj0OL8Ca5k4GTPGUi5dskb5F8-lkKmRD9wy7J1EZ8iU3yrYzHhbK1_dMhC-sAzhXaAb18hthBOa6rBgzm_D1yxM6490V_E85UHvZZva9jQl8q3euk-sPuFgZYltGwyyMw3lTZ_siY_3gGfQNQyJf6v2FxjQnBOcn0ZLHX6tZeRK1iypzFtE8OdiFjrD1wCsroytPQzpi6sCFScRXkRXhg2BBaM");'></div>
+<div class="flex flex-col">
+<h1 class="text-gray-900 dark:text-white text-base font-semibold leading-normal">خالد الأحمد</h1>
+<p class="text-primary/80 dark:text-primary/90 text-sm font-normal leading-normal">زبون</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-primary/10 hover:text-gray-900 dark:hover:text-white" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-sm font-medium leading-normal">الرئيسية</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-gray-900 dark:text-white dark:bg-primary/30" href="#">
+<span class="material-symbols-outlined">package_2</span>
+<p class="text-sm font-medium leading-normal">طلباتي</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-primary/10 hover:text-gray-900 dark:hover:text-white" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-sm font-medium leading-normal">ملفي الشخصي</p>
+</a>
+</nav>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">إنشاء طلب جديد</span>
+</button>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8">
+<div class="w-full max-w-7xl mx-auto">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+<p class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">طلباتي</p>
+</div>
+<!-- SearchBar -->
+<div class="mb-4">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-gray-400 flex border-none bg-white dark:bg-black/20 items-center justify-center pl-4 rounded-r-lg border-l-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-white dark:bg-black/20 h-full placeholder:text-gray-400 dark:placeholder:text-gray-500 px-4 rounded-l-lg border-r-0 pl-2 text-base font-normal leading-normal" placeholder="ابحث بالرقم، المنتج، أو اسم البائع" value=""/>
+</div>
+</label>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 mb-6 overflow-x-auto pb-2">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 dark:bg-primary/30 text-gray-900 dark:text-white px-4">
+<p class="text-sm font-medium leading-normal">الكل</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-black/20 px-4 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+<p class="text-sm font-medium leading-normal">قيد المعالجة</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-black/20 px-4 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+<p class="text-sm font-medium leading-normal">تم الشحن</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-black/20 px-4 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+<p class="text-sm font-medium leading-normal">في الطريق</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-black/20 px-4 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+<p class="text-sm font-medium leading-normal">تم التوصيل</p>
+</button>
+</div>
+<!-- Table -->
+<div class="@container">
+<div class="flex overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black/20">
+<table class="flex-1 w-full text-right">
+<thead class="bg-gray-50 dark:bg-black/20">
+<tr>
+<th class="px-4 py-3 text-gray-700 dark:text-gray-300 text-sm font-semibold leading-normal">رقم الطلب</th>
+<th class="table-column-date px-4 py-3 text-gray-700 dark:text-gray-300 text-sm font-semibold leading-normal">تاريخ الطلب</th>
+<th class="table-column-seller px-4 py-3 text-gray-700 dark:text-gray-300 text-sm font-semibold leading-normal">اسم البائع/المزرعة</th>
+<th class="table-column-amount px-4 py-3 text-gray-700 dark:text-gray-300 text-sm font-semibold leading-normal">المبلغ الإجمالي</th>
+<th class="table-column-status px-4 py-3 text-gray-700 dark:text-gray-300 text-sm font-semibold leading-normal">الحالة</th>
+<th class="table-column-action px-4 py-3 text-gray-700 dark:text-gray-300 text-sm font-semibold leading-normal">إجراء</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-gray-800">
+<tr class="hover:bg-gray-50 dark:hover:bg-black/10">
+<td class="h-[72px] px-4 py-2 text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">#12345</td>
+<td class="table-column-date h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">15 أغسطس 2023</td>
+<td class="table-column-seller h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">مزرعة الخير</td>
+<td class="table-column-amount h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">350.00 ر.س</td>
+<td class="table-column-status h-[72px] px-4 py-2 text-sm font-normal leading-normal">
+<div class="inline-flex items-center gap-2 rounded-full h-7 px-3 bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-300 text-xs font-medium">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+                                            تم التوصيل
+                                        </div>
+</td>
+<td class="table-column-action h-[72px] px-4 py-2 text-primary dark:text-primary/90 text-sm font-bold leading-normal tracking-[0.015em] cursor-pointer hover:underline">عرض التفاصيل</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-black/10">
+<td class="h-[72px] px-4 py-2 text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">#12344</td>
+<td class="table-column-date h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">12 أغسطس 2023</td>
+<td class="table-column-seller h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">محاصيل الشمال</td>
+<td class="table-column-amount h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">120.50 ر.س</td>
+<td class="table-column-status h-[72px] px-4 py-2 text-sm font-normal leading-normal">
+<div class="inline-flex items-center gap-2 rounded-full h-7 px-3 bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-xs font-medium">
+<span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                                            في الطريق
+                                        </div>
+</td>
+<td class="table-column-action h-[72px] px-4 py-2 text-primary dark:text-primary/90 text-sm font-bold leading-normal tracking-[0.015em] cursor-pointer hover:underline">عرض التفاصيل</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-black/10">
+<td class="h-[72px] px-4 py-2 text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">#12343</td>
+<td class="table-column-date h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">10 أغسطس 2023</td>
+<td class="table-column-seller h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">أرض الطبيعة</td>
+<td class="table-column-amount h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">480.00 ر.س</td>
+<td class="table-column-status h-[72px] px-4 py-2 text-sm font-normal leading-normal">
+<div class="inline-flex items-center gap-2 rounded-full h-7 px-3 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-800 dark:text-indigo-300 text-xs font-medium">
+<span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                                            تم الشحن
+                                        </div>
+</td>
+<td class="table-column-action h-[72px] px-4 py-2 text-primary dark:text-primary/90 text-sm font-bold leading-normal tracking-[0.015em] cursor-pointer hover:underline">عرض التفاصيل</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-black/10">
+<td class="h-[72px] px-4 py-2 text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">#12342</td>
+<td class="table-column-date h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">9 أغسطس 2023</td>
+<td class="table-column-seller h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">واحة النخيل</td>
+<td class="table-column-amount h-[72px] px-4 py-2 text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">215.75 ر.س</td>
+<td class="table-column-status h-[72px] px-4 py-2 text-sm font-normal leading-normal">
+<div class="inline-flex items-center gap-2 rounded-full h-7 px-3 bg-yellow-100 dark:bg-yellow-900/40 text-yellow-800 dark:text-yellow-300 text-xs font-medium">
+<span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+                                            قيد المعالجة
+                                        </div>
+</td>
+<td class="table-column-action h-[72px] px-4 py-2 text-primary dark:text-primary/90 text-sm font-bold leading-normal tracking-[0.015em] cursor-pointer hover:underline">عرض التفاصيل</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<style>
+                  @container (max-width: 900px) { .table-column-seller { display: none; } }
+                  @container (max-width: 768px) { .table-column-amount { display: none; } }
+                  @container (max-width: 640px) { .table-column-date { display: none; } }
+                  @container (max-width: 480px) { .table-column-action { display: none; } }
+                </style>
+<!-- Pagination -->
+<div class="flex items-center justify-center pt-8">
+<nav class="flex items-center gap-2">
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">chevron_right</span>
+</button>
+<button class="flex items-center justify-center size-9 rounded-lg bg-primary/20 dark:bg-primary/30 text-gray-900 dark:text-white font-semibold">1</button>
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300">2</button>
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300">3</button>
+<span class="text-gray-500 dark:text-gray-400">...</span>
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300">8</button>
+<button class="flex items-center justify-center size-9 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">chevron_left</span>
+</button>
+</nav>
+</div>
+</div>
+</main>
+</div>
+</body></html>

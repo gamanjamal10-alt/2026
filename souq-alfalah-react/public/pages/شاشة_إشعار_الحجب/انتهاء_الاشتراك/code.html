@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Subscription Expired</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3fd411",
+              "background-light": "#f6f8f6",
+              "background-dark": "#142210",
+            },
+            fontFamily: {
+              "display": ["Work Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark p-4 group/design-root" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCMBQ_SinuShTl16GyzrtEUtTXFRkkTALdRBrjYmzR0olOeDJ7L4n55Sk63xqD3tuLTnYdFVar1WPFEJtUAM2ulDHgBHLRwuOioy-4mDDEZpx1MFW2UcQaUnZb8dxsOiHkNttlpvXBasKFU_sgLnGKzbsmw_BvHZEp9gFG2ZSOnwPzd15fkMT3Uskg9WmtjO054zOSp98539dEylVXVhuOG5l2ZKkkmnRKTG3d5JMAAHrn2iiobL7MqcLTVoWPla9smjlnkc4rwmh4");'>
+<div class="layout-container flex h-full grow flex-col w-full">
+<div class="flex flex-1 items-center justify-center py-5">
+<div class="layout-content-container flex w-full max-w-lg flex-col items-center justify-center space-y-6 rounded-xl border border-zinc-200/50 bg-white/80 p-6 shadow-2xl shadow-zinc-200/40 backdrop-blur-sm dark:border-zinc-800/50 dark:bg-background-dark/80 dark:shadow-zinc-900/40 sm:p-10">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined !text-4xl" data-icon="lock">lock</span>
+</div>
+<h1 class="text-center text-3xl font-bold leading-tight tracking-tight text-[#111b0d] dark:text-background-light">اشتراكك قد انتهى!</h1>
+<p class="px-4 text-center text-base font-normal leading-relaxed text-zinc-600 dark:text-zinc-400">
+                        لقد انتهت صلاحية اشتراكك. لاستعادة الوصول الكامل إلى لوحة التحكم وإدارة متجرك ومنتجاتك، يرجى تجديد اشتراكك.
+                    </p>
+<div class="flex w-full justify-center px-4 py-3">
+<button class="flex h-12 w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary text-base font-bold leading-normal tracking-[0.015em] text-background-dark transition-transform hover:scale-105">
+<span class="truncate">جدّد اشتراكك الآن</span>
+</button>
+</div>
+<p class="cursor-pointer px-4 pt-1 text-center text-sm font-normal leading-normal text-zinc-500 underline decoration-zinc-300 underline-offset-4 hover:text-primary dark:text-zinc-400 dark:decoration-zinc-600 dark:hover:text-primary">هل تحتاج إلى مساعدة؟ تواصل مع الدعم الفني</p>
+</div>
+</div>
+</div>
+</div>
+</body></html>

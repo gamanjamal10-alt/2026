@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>الرسائل</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2A9D8F",
+              "secondary": "#E9C46A",
+              "background-light": "#F4F1DE",
+              "background-dark": "#1a2c33",
+              "text-light": "#264653",
+              "text-dark": "#F4F1DE",
+              "card-light": "#FFFFFF",
+              "card-dark": "#264653",
+              "border-light": "#E0E0E0",
+              "border-dark": "#3a5a6a"
+            },
+            fontFamily: {
+              "display": ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex h-full w-20 flex-col items-center border-l border-border-light bg-card-light dark:border-border-dark dark:bg-card-dark lg:w-64">
+<div class="flex h-full w-full flex-col justify-between p-2 lg:p-4">
+<div class="flex flex-col gap-4">
+<div class="hidden items-center gap-3 lg:flex">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMrhMHRzVQ54iTMVNTxhKpUQMbWEDQQkhGXSQfBvlMXTVgSOyLcZdwZnwUARJWFtyW_kbFMGZIE646Wm6njBzJ-rwdB5SNWVRtUyPqZp9juLgvX8LAMspTq0zesF7Bn64iauYCz8LC-OGa3TcQvWsAC7VtNix2ZrasQLJ1gBztGblLAqEjCNkDs5USmIKyKZuJQMKhJGn-N-oXZKDH4fvQwgQXudA0TkaexpZwBAji33E8kK7nucDRbS1D14YGE2XqQyMFh-dF0I0");'></div>
+<div class="flex flex-col">
+<h1 class="text-text-light dark:text-text-dark text-base font-medium leading-normal">عبدالله فهد</h1>
+<p class="text-primary text-sm font-normal leading-normal">مزارع</p>
+</div>
+</div>
+<div class="flex items-center justify-center lg:hidden">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHsRebn5FpvtZEp9IcH5lCfsecN-bI7pSSXs-RVb7xVHY5WG6kJUIelqDAHVFaFyBddB6NmLBbVuYH1NjWHn5u-ju8nE40AOTLUjqMN6VspvXHbSXWifZS7GGnm0a19llgLWbO3e9LnpOIBcknG11FZpsdrW1e46hLHyVFAXNNkn_MjVxzoBwQ0jcJC3a84JwwmhOpAbxBtKOT9etWF79pCxiVvj3SRQJpHz57lh_HKLNJaenJM3YvldGuwtQCPmYconEnfo0uIFM");'></div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light hover:bg-primary/20 dark:text-text-dark dark:hover:bg-primary/30" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="hidden text-sm font-medium leading-normal lg:block">الرئيسية</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light hover:bg-primary/20 dark:text-text-dark dark:hover:bg-primary/30" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<p class="hidden text-sm font-medium leading-normal lg:block">السوق</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg bg-primary/20 px-3 py-2 text-primary dark:bg-primary/30" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+<p class="hidden text-sm font-medium leading-normal lg:block">الرسائل</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light hover:bg-primary/20 dark:text-text-dark dark:hover:bg-primary/30" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<p class="hidden text-sm font-medium leading-normal lg:block">الطلبات</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light hover:bg-primary/20 dark:text-text-dark dark:hover:bg-primary/30" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="hidden text-sm font-medium leading-normal lg:block">ملفي الشخصي</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary text-text-light text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90">
+<span class="truncate hidden lg:block">إنشاء عرض جديد</span>
+<span class="material-symbols-outlined block lg:hidden">add</span>
+</button>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light hover:bg-primary/20 dark:text-text-dark dark:hover:bg-primary/30" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="hidden text-sm font-medium leading-normal lg:block">الإعدادات</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light hover:bg-primary/20 dark:text-text-dark dark:hover:bg-primary/30" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="hidden text-sm font-medium leading-normal lg:block">تسجيل الخروج</p>
+</a>
+</div>
+</div>
+</div>
+</aside>
+<!-- Left Panel: Conversation List -->
+<div class="flex h-full w-full max-w-sm flex-col border-l border-border-light bg-card-light dark:border-border-dark dark:bg-card-dark">
+<div class="border-b border-border-light p-4 dark:border-border-dark">
+<h2 class="text-2xl font-bold text-text-light dark:text-text-dark">الرسائل</h2>
+</div>
+<div class="px-4 py-3">
+<label class="flex flex-col h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-primary flex items-center justify-center rounded-r-lg border-y border-r border-border-light bg-background-light px-4 dark:border-border-dark dark:bg-background-dark">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg border-y border-l border-border-light bg-background-light px-4 text-base font-normal leading-normal text-text-light placeholder:text-primary/70 focus:border-primary focus:outline-0 focus:ring-0 dark:border-border-dark dark:bg-background-dark dark:text-text-dark" placeholder="ابحث عن مستخدم أو محادثة" value=""/>
+</div>
+</label>
+</div>
+<div class="flex-1 overflow-y-auto">
+<!-- Active Conversation -->
+<div class="cursor-pointer border-r-4 border-primary bg-primary/20 px-4 py-3 dark:bg-primary/30">
+<div class="flex items-start gap-4 justify-between">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14" data-alt="Profile picture of محمد علي" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4dFPgK8Y8xVgWDsENo-xXP9Ebmov6Q_ERtWo6kWQNEAqY1lfYSdg2YijO4tbyOhjW18Ukcafl3U9b9nQ5E7PUOen2Kuf2bz5w3u1NgtAGRJQrP97AOkcgwCaOnynFP4aymzaGYChhmFE5mLflThUU690Cw1v8uO4FjW-ctVANrQ6rgIBQdhwjhi_LrW0RKCE8tOgD9u6kMU1NHosqF_Ouk3SiuHN0LC-NCPmKVgJxuLhbxj6_FxphdzRgxz4a8B3r_TkeE6VLntE");'></div>
+<div class="flex flex-1 flex-col justify-center gap-1">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-tight">محمد علي</p>
+<p class="text-primary text-sm font-normal leading-tight">تاجر جملة</p>
+<p class="text-text-light/80 dark:text-text-dark/80 text-sm font-normal leading-tight">تمام، سأرسل لك صور المحصول...</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-1.5">
+<p class="text-primary text-xs font-medium leading-normal">5:30 مساءً</p>
+<div class="flex size-6 items-center justify-center rounded-full bg-primary text-white text-xs font-bold">2</div>
+</div>
+</div>
+</div>
+<!-- Other Conversations -->
+<div class="cursor-pointer border-r-4 border-transparent px-4 py-3 hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex items-start gap-4 justify-between">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14" data-alt="Profile picture of شركة النخيل للنقل" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFI1CvN-cjQxoUCK0II7-s44HqQGAbDwERz86j19eAuEMDo8BkNOy1NgbA1zya_DYY8vqihAs7Rkcins28yO6vpBu5bUIZzls9BdTnI--aN0cHJAxPqOIQusGJsy-l1tao7jaFcGg8Pj9KI5xj42AnGaZne7bfA4Hzl9kjBhtTPu2o1AyVQssgLwZk7mAywixBtZZIfZLtSYBuzZOLL3gmnFNhgKmNptpPqNg6VJjNe82RwlDof8rqbvq10BsvSjSoFZtAKedaFgs");'></div>
+<div class="flex flex-1 flex-col justify-center gap-1">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-tight">شركة النخيل للنقل</p>
+<p class="text-primary text-sm font-normal leading-tight">ناقل</p>
+<p class="text-text-light/80 dark:text-text-dark/80 text-sm font-normal leading-tight">تم تأكيد وصول الشحنة. شكراً...</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-text-light/60 dark:text-text-dark/60 text-xs font-normal leading-normal">أمس</p></div>
+</div>
+</div>
+<div class="cursor-pointer border-r-4 border-transparent px-4 py-3 hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex items-start gap-4 justify-between">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14" data-alt="Profile picture of فاطمة حسين" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDOXgv3JzMOR93Zh05RcyGV-0Vj-UgO8GefTB9fRrIfKZ6y4pcw-5ONqmoyxSNEovj63RNCE8DX3RORVBHL7M0axUN3ANLlt0Eejbb7b6ctWDLu9ISS-tPQv-_KLXmgOnGNqtaKWjDqO2qnzGPpAM-xj5Prxr2J0WLzYThq72CuiLNrPQHL9q8Y0_r1smYWmvM6LSg_IObfKjZl_oP4JeT0YdKTasuzmMaApHZVhbrcCtsHFuF5HK4aQGZqMv_4kVpRMa0qWb7-gRY");'></div>
+<div class="flex flex-1 flex-col justify-center gap-1">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-tight">فاطمة حسين</p>
+<p class="text-primary text-sm font-normal leading-tight">تاجر تجزئة</p>
+<p class="text-text-light/80 dark:text-text-dark/80 text-sm font-normal leading-tight">هل الأسعار قابلة للتفاوض؟</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-text-light/60 dark:text-text-dark/60 text-xs font-normal leading-normal">2/10/2024</p></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Active Chat Window -->
+<main class="flex h-full flex-1 flex-col bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<header class="flex items-center justify-between border-b border-border-light bg-card-light px-6 py-4 dark:border-border-dark dark:bg-card-dark">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Profile picture of محمد علي" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWOOTwHZYBfujDWgF_MU5z0M44mVK4EsERNVtSip9Jp_CLWC_zTyrE2TKZ7KbxDn6RiaL_auUqeW1DV4HrineuzYYpsv3irRmQXEh22P7mxDNqz7XtUiPQSY4vDJvxDrfz9E0sjObk-qCJ4XhbJzwN0-sXQC91tjFpgrfg4-l82oUo31S2bvBK1L_vaNMXBhwUMyphq5THB5MdbS5aT_iG1dbYhiNW1KvtW4QE4C3QY8moHTzcq7V_-iJB751nmjUPfLHN3ifeqgE");'></div>
+<div>
+<h3 class="text-lg font-bold text-text-light dark:text-text-dark">محمد علي</h3>
+<p class="text-sm text-primary">تاجر جملة</p>
+</div>
+</div>
+<button class="text-text-light/70 hover:text-primary dark:text-text-dark/70 dark:hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</header>
+<!-- Message Area -->
+<div class="flex-1 overflow-y-auto p-6">
+<div class="flex flex-col gap-4">
+<!-- Received Message -->
+<div class="flex items-end gap-3 self-start max-w-lg">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 shrink-0" data-alt="Profile picture of محمد علي" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAN3BNXcWzj5kSGAJPIGQZPC84bPjl0TtfBKyb2OD9Cf_1twJZDbwce9Xp9zuwCI-c66ddG9d3Q_AL7NXieP-ACNCxkx134bMmdGiz7Q2SfXlx4AVPQjJpjew6zIEM2-NxUMZhW56uiucddSfXACQdHtda8tSwYJgFeOkzO8iQNVEmnzDf_g8nhUmExFconBveuFI7oz_QS07xc5QrQgYfUtNd2g1FQJ321ncakCrtuPQUCbxgGriHDa_1UKbuZ68mdJopqX5DOcYc");'></div>
+<div class="rounded-xl rounded-br-none bg-card-light p-3 shadow-sm dark:bg-card-dark">
+<p class="text-sm leading-relaxed text-text-light dark:text-text-dark">السلام عليكم، هل محصول الطماطم جاهز للشحن؟</p>
+</div>
+</div>
+<!-- Sent Message -->
+<div class="flex items-end gap-3 self-end max-w-lg">
+<div class="rounded-xl rounded-bl-none bg-primary p-3 shadow-sm">
+<p class="text-sm leading-relaxed text-white">وعليكم السلام، نعم جاهز. الكمية 100 صندوق.</p>
+</div>
+</div>
+<!-- Received Message -->
+<div class="flex items-end gap-3 self-start max-w-lg">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 shrink-0" data-alt="Profile picture of محمد علي" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzUL3niR9JB_BEYnyveL_7piMmCuKP6Ena3hfGnvhVK1mAs_7sCetMQqvCm5F5D1G_Om1bD8HYS558hgLaBXa02bDFjMy6DuyXC3grAuT3K_Dyx958kl7K1kmXzkbzRZPh_UBHD-SfPLSHj6UzsiLWdBmzS5Fa28kYv8VDz-rztH8VpG_7trdF_qDol35gPkO-aq85zEEh7wCQAxcFj5VXtSsyIaJgqt-coHP5xYZru2gB2TNXpozE23TxqnjdahjY65lY4F9m95k");'></div>
+<div class="rounded-xl rounded-br-none bg-card-light p-3 shadow-sm dark:bg-card-dark">
+<p class="text-sm leading-relaxed text-text-light dark:text-text-dark">ممتاز جداً. هل يمكنك إرسال بعض الصور للتأكيد؟</p>
+</div>
+</div>
+<!-- Sent Message -->
+<div class="flex items-end gap-3 self-end max-w-lg">
+<div class="rounded-xl rounded-bl-none bg-primary p-3 shadow-sm">
+<p class="text-sm leading-relaxed text-white">تمام، سأرسل لك صور المحصول غداً صباحاً.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Message Input Field -->
+<div class="mt-auto border-t border-border-light bg-card-light p-4 dark:border-border-dark dark:bg-card-dark">
+<div class="flex items-center gap-4">
+<input class="flex-1 rounded-full border border-border-light bg-background-light px-4 py-2.5 text-sm text-text-light focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-border-dark dark:bg-background-dark dark:text-text-dark" placeholder="اكتب رسالتك هنا..." type="text"/>
+<button class="text-text-light/70 hover:text-primary dark:text-text-dark/70 dark:hover:text-primary">
+<span class="material-symbols-outlined text-3xl">add_circle</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-full bg-secondary text-text-light hover:opacity-90">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Placeholder for when no chat is selected (hidden by default on larger screens) -->
+<!-- <div class="hidden flex-1 items-center justify-center bg-background-light dark:bg-background-dark md:flex">
+        <div class="text-center">
+            <span class="material-symbols-outlined text-6xl text-text-light/30 dark:text-text-dark/30">chat</span>
+            <p class="mt-4 text-lg text-text-light/60 dark:text-text-dark/60">اختر محادثة لبدء الدردشة</p>
+        </div>
+    </div> -->
+</div>
+</body></html>

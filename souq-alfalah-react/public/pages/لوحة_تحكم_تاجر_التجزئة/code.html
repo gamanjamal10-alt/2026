@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>لوحة تحكم المتجر</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#3fd411",
+            "background-light": "#f6f8f6",
+            "background-dark": "#142210",
+            "surface-light": "#ffffff",
+            "surface-dark": "#1a2a16",
+            "text-light-primary": "#111b0d",
+            "text-dark-primary": "#f6f8f6",
+            "text-light-secondary": "#5e9a4c",
+            "text-dark-secondary": "#a2c499",
+            "border-light": "#d5e7cf",
+            "border-dark": "#2a4225",
+            "success": "#078821",
+            "warning": "#FFC107",
+            "info": "#007BFF"
+          },
+          fontFamily: {
+            "display": ["Work Sans", "Noto Sans Arabic", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light-primary dark:text-text-dark-primary">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed top-0 right-0 h-full w-64 bg-surface-light dark:bg-surface-dark border-l border-border-light dark:border-border-dark flex flex-col p-4 shadow-sm z-10">
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Store logo with a green leaf icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDe6aV0qxKfa6z4h0xZJQ-_rLXXxRUZSfD3OuaPcgyx7okR-dFBKKqE1gygP7c1Jbx4pLEfmrZF32u4PTdqL9X5_DUcX8uQixZ8H4pmP4rFqVjwrlvEB4R4EOGMsuu2SMp5xWdjhWrhzDvlVQBPITgfBJYhmIguwxyEvts_ck7U7RK1Bs76T62RYvkGc76Hr26hcCntRyQ4RoN5qCp4lqJPpgKtrg70ydGFsnJH1g1I4-X-LORB77HKcmr4QT0hr1CJHbA4wunCZqY");'></div>
+<div class="flex flex-col">
+<h1 class="font-bold text-base">متجر النخيل</h1>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal">تاجر تجزئة</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 dark:bg-primary/30 text-text-light-primary dark:text-text-dark-primary" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<p class="text-sm font-medium">لوحة التحكم</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+<p class="text-sm font-medium">المنتجات</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-xl">sell</span>
+<p class="text-sm font-medium">المبيعات</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-xl">warehouse</span>
+<p class="text-sm font-medium">المخزون</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-xl">assessment</span>
+<p class="text-sm font-medium">التقارير</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<p class="text-sm font-medium">الإعدادات</p>
+</a>
+</nav>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-xl">logout</span>
+<p class="text-sm font-medium">تسجيل الخروج</p>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 mr-64 ml-80 p-8">
+<!-- PageHeading -->
+<header class="flex flex-wrap justify-between items-center gap-4 mb-6">
+<h1 class="text-4xl font-black tracking-tight">لوحة تحكم المتجر</h1>
+</header>
+<!-- Stats -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-sm">
+<p class="text-base font-medium">مبيعات اليوم</p>
+<p class="text-3xl font-bold">١,٢٥٠ ريال</p>
+<p class="text-success text-base font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">arrow_upward</span>
+<span>5.2%</span>
+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-sm">
+<p class="text-base font-medium">الطلبات الجديدة</p>
+<p class="text-3xl font-bold">١٥</p>
+<p class="text-success text-base font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">arrow_upward</span>
+<span>3+</span>
+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-sm">
+<p class="text-base font-medium">مستوى المخزون</p>
+<p class="text-3xl font-bold text-warning">يحتاج انتباه</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-base font-medium">منتجان على وشك النفاذ</p>
+</div>
+</section>
+<!-- Products Table Section -->
+<section class="bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-xl shadow-sm">
+<!-- SectionHeader & SingleButton -->
+<div class="flex flex-wrap justify-between items-center gap-4 p-6 border-b border-border-light dark:border-border-dark">
+<h2 class="text-2xl font-bold tracking-tight">منتجاتي</h2>
+<button class="flex items-center justify-center gap-2 h-10 px-4 rounded-lg bg-primary text-text-light-primary text-sm font-bold tracking-wide hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-xl">add</span>
+<span>إضافة منتج جديد</span>
+</button>
+</div>
+<!-- Products Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead class="border-b border-border-light dark:border-border-dark">
+<tr>
+<th class="p-4 font-semibold text-sm text-text-light-secondary dark:text-text-dark-secondary">المنتج</th>
+<th class="p-4 font-semibold text-sm text-text-light-secondary dark:text-text-dark-secondary">الكمية</th>
+<th class="p-4 font-semibold text-sm text-text-light-secondary dark:text-text-dark-secondary">السعر</th>
+<th class="p-4 font-semibold text-sm text-text-light-secondary dark:text-text-dark-secondary">إجراءات</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-light dark:border-border-dark hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-12" data-alt="Fresh tomatoes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4Ne8qWjGJ3L5a2uNmDUhUwtLdWBwtTRWUsrLtbB6XqRXZkkH3FNflYr98mhZlPzX99SEFHhEsjVpcPn_8zKqCYK0omKjobYK4vaZ0ovmxewyBh02YM3SAS9Hp_nBwqQVqxFfCEfkZmU8s5Htq2iNb3sWgPSuatQD0vxF8_7OjTzEFY9giXaoisS-N-YzU484X_bVNPmLeefxGeQENxqtw6E6b27_TR7ib51hafELgZDWEZ-6doS4u5QpvkjGxTbD9b2A0MuVagQ8");'></div>
+<span class="font-medium">طماطم</span>
+</div>
+</td>
+<td class="p-4 font-medium">50 كجم</td>
+<td class="p-4 font-medium">3.50 ريال/كجم</td>
+<td class="p-4">
+<div class="flex gap-2">
+<button class="p-2 rounded-md hover:bg-primary/20"><span class="material-symbols-outlined text-xl">edit</span></button>
+<button class="p-2 rounded-md hover:bg-red-500/20 text-red-500"><span class="material-symbols-outlined text-xl">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-12" data-alt="Fresh cucumbers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlRVyILsshU7zH82R5sTj-2wTOBdsJmSrzlumTQW5nCLGTKP8JYRL5NfyLkx1vR8bcRsSbgKCEs648YTpCSRr10gLHLy7A8NgHuW-4PlukpZbxwgf75WGYem67kpBasHT4VJ1WvdZIo_pWkyD_FqKurMTRPsp8PT1pBhmoI8GrXy_B-jgmbxemL7_ruHz2us8nTgLF-ORMJ1k9P0k66Q52Nz8KpEzNN8HrZMPZc-GSIq7MOY-Xirb8DVv8YfTHcyTn0Obxvj_iu0M");'></div>
+<span class="font-medium">خيار</span>
+</div>
+</td>
+<td class="p-4 font-medium">120 كجم</td>
+<td class="p-4 font-medium">2.00 ريال/كجم</td>
+<td class="p-4">
+<div class="flex gap-2">
+<button class="p-2 rounded-md hover:bg-primary/20"><span class="material-symbols-outlined text-xl">edit</span></button>
+<button class="p-2 rounded-md hover:bg-red-500/20 text-red-500"><span class="material-symbols-outlined text-xl">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-12" data-alt="Fresh carrots" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNQ_f7hANUmqjCe6kWQXgqznWHi6hhws0dC7WcOTF0WiaMPQOTTbZyQCs00wVHgzogGxluHXW3fzHLLjWyMLOEKiZSvowhL-JMVMMnZRkD0x0UWFU1fUeJLXeYFtUPofo-ucX7bDn6nL9YP5Xmp32UdtPFX5FfhSHvMCBmEjWBTfb6ptNuDJCO2zkGQc7PSEMrLnhDRJS8eH70uKU8ugry_IZ8OPabDqroNx5fm3o4FIataYT7pPDMQznjrHI8Tbvtnn8Ws6U8CC0");'></div>
+<span class="font-medium">جزر</span>
+</div>
+</td>
+<td class="p-4 font-medium"><span class="text-warning">5 كجم</span></td>
+<td class="p-4 font-medium">4.00 ريال/كجم</td>
+<td class="p-4">
+<div class="flex gap-2">
+<button class="p-2 rounded-md hover:bg-primary/20"><span class="material-symbols-outlined text-xl">edit</span></button>
+<button class="p-2 rounded-md hover:bg-red-500/20 text-red-500"><span class="material-symbols-outlined text-xl">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- Action Column -->
+<aside class="fixed top-0 left-0 h-full w-80 bg-surface-light dark:bg-surface-dark border-r border-border-light dark:border-border-dark flex flex-col p-6 gap-6 shadow-sm z-10">
+<!-- Subscription Status -->
+<div class="flex flex-col gap-4 p-4 rounded-xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark">
+<h3 class="font-bold">حالة الاشتراك</h3>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">أنت على الخطة المجانية. قم بالترقية للوصول إلى ميزات متقدمة.</p>
+<button class="w-full flex items-center justify-center gap-2 h-10 px-4 rounded-lg bg-info text-white text-sm font-bold hover:bg-info/90 transition-colors">
+<span class="material-symbols-outlined text-xl">workspace_premium</span>
+<span>ترقية الاشتراك</span>
+</button>
+</div>
+<!-- Notifications -->
+<div class="flex flex-col gap-3">
+<h3 class="font-bold px-2">التنبيهات</h3>
+<div class="flex items-start gap-3 p-3 rounded-lg bg-warning/10 text-warning">
+<span class="material-symbols-outlined mt-1">warning</span>
+<div class="flex flex-col">
+<p class="font-medium text-sm text-amber-800 dark:text-amber-200">مخزون منخفض</p>
+<p class="text-sm text-amber-700 dark:text-amber-300">مخزون الجزر على وشك النفاذ.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 rounded-lg bg-success/10 text-success">
+<span class="material-symbols-outlined mt-1">check_circle</span>
+<div class="flex flex-col">
+<p class="font-medium text-sm text-green-800 dark:text-green-200">دفعة جديدة</p>
+<p class="text-sm text-green-700 dark:text-green-300">تم استلام طلبية الخيار بنجاح.</p>
+</div>
+</div>
+</div>
+<!-- Store Contact Card -->
+<div class="flex flex-col gap-4 p-4 rounded-xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark">
+<h3 class="font-bold">معلومات التواصل بالمتجر</h3>
+<a class="flex items-center justify-between p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="tel:+966501234567">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">call</span>
+<span class="font-medium">+966 50 123 4567</span>
+</div>
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary">open_in_new</span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="https://wa.me/966501234567" target="_blank">
+<div class="flex items-center gap-3">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.6 15.31 3.43 16.78L2.05 22L7.31 20.62C8.75 21.39 10.36 21.82 12.04 21.82C17.5 21.82 21.95 17.37 21.95 11.91C21.95 9.27 20.92 6.83 19.16 4.96C17.4 3.1 14.88 2 12.04 2M12.04 3.67C14.25 3.67 16.31 4.53 17.82 6.04C19.33 7.55 20.19 9.61 20.19 11.82C20.19 16.46 16.59 20.06 11.95 20.06C10.46 20.06 9.03 19.68 7.79 19L7.43 18.78L4.39 19.64L5.27 16.69L5.04 16.32C4.19 15.03 3.78 13.5 3.78 11.82C3.78 7.18 7.38 3.67 12.04 3.67M9.13 7.5C8.91 7.5 8.7 7.58 8.54 7.74C8.38 7.9 8.08 8.2 8.08 8.76C8.08 9.32 8.91 10.19 9 10.31C9.09 10.43 10.5 12.68 12.75 13.61C14.53 14.34 15.06 14.16 15.42 14.12C15.78 14.08 16.68 13.56 16.89 13C17.1 12.44 17.1 11.97 17.02 11.85C16.94 11.73 16.73 11.65 16.48 11.53C16.23 11.41 14.71 10.69 14.46 10.58C14.21 10.46 14.05 10.42 13.89 10.66C13.73 10.9 13.26 11.42 13.14 11.58C13.02 11.74 12.9 11.78 12.65 11.66C12.4 11.54 11.45 11.23 10.33 10.25C9.47 9.5 8.89 8.63 8.73 8.39C8.57 8.15 8.71 8.04 8.83 7.92C8.93 7.82 9.07 7.64 9.19 7.52C9.31 7.4 9.35 7.32 9.43 7.16C9.51 7 9.47 6.84 9.43 6.72C9.39 6.6 9.13 6.04 9.13 6.04L9.13 7.5Z"></path>
+</svg>
+<span class="font-medium">واتساب</span>
+</div>
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary">open_in_new</span>
+</a>
+</div>
+</aside>
+</div>
+</body></html>

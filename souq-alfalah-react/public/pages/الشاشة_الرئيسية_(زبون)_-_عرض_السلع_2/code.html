@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>سوق الفلاح</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#3fd411",
+            "background-light": "#f6f8f6",
+            "background-dark": "#142210",
+          },
+          fontFamily: {
+            "display": ["Cairo", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<span class="material-symbols-outlined text-primary text-3xl">grass</span>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">سوق الفلاح</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">الرئيسية</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">الفئات</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">حسابي</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-primary/20 text-gray-900 dark:text-white hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWHczOauvVn3ZFjvDeC5lJ8GfLFJMU9Zh2_L7lgEv09jTysB0mThsp8dBYCL-uHBBTMf_LvYr5PQThhYVDA3uvWaNhZZ4b_sdHay_g3FLOagH4V0feHfrORfRkmOYrnrZnmAptxiXYQ2Rz8MKZlqWUa6a5qK14Vy5Y1CZEM6AUaUIIhV2pKTfklsYHkz_u1rcD2g4ULKD-K6ne2HU5mGoCrdwAIsb2Fgf9XfCzzeKiS3xAe8SSEXZy7gCYgYXZMJgv4Iek1qmgv7g");'></div>
+</div>
+</div>
+<div class="flex w-full items-center gap-2 pb-4">
+<div class="flex-grow">
+<label class="flex h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full shadow-sm bg-white dark:bg-gray-900/50 border border-gray-300 dark:border-gray-700">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-gray-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 text-base font-normal leading-normal" placeholder="ابحث عن منتجات، علامات تجارية، أو متاجر..." value=""/>
+<div class="text-gray-500 dark:text-gray-400 flex items-center justify-center pl-2 pr-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+</div>
+</label>
+</div>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-6 text-white text-base font-bold transition-colors hover:bg-primary/90">بحث</button>
+</div>
+</div>
+</header>
+<main class="layout-container flex h-full grow flex-col">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<aside class="w-full lg:w-1/4 xl:w-1/5 shrink-0">
+<div class="sticky top-40 space-y-6 bg-white dark:bg-gray-800/50 p-4 rounded-xl shadow-md">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">خيارات التصفية</h3>
+<div class="space-y-4">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="category">فئة المنتج</label>
+<select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:outline-none focus:ring-primary focus:border-primary sm:text-sm rounded-lg" id="category" name="category">
+<option>الكل</option>
+<option>خضروات</option>
+<option>فواكه</option>
+<option>حبوب</option>
+<option>ألبان</option>
+</select>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="location">الموقع</label>
+<input class="mt-1 block w-full border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark rounded-lg shadow-sm focus:ring-primary focus:border-primary sm:text-sm" id="location" placeholder="مثال: الرياض" type="text"/>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="price-range">نطاق السعر</label>
+<input class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-primary" id="price-range" max="1000" min="0" type="range"/>
+<div class="flex justify-between text-xs text-gray-500 dark:text-gray-400">
+<span>$0</span>
+<span>$1000</span>
+</div>
+</div>
+<div class="space-y-2">
+<span class="block text-sm font-medium text-gray-700 dark:text-gray-300">تقييم المنتج</span>
+<div class="flex items-center space-x-1 text-yellow-400 flex-row-reverse">
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer text-gray-300 dark:text-gray-600">star_outline</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 mr-2">و أعلى</span>
+</div>
+</div>
+<div class="space-y-2">
+<span class="block text-sm font-medium text-gray-700 dark:text-gray-300">تقييم المتجر</span>
+<div class="flex items-center space-x-1 text-yellow-400 flex-row-reverse">
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer text-gray-300 dark:text-gray-600">star_outline</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 mr-2">و أعلى</span>
+</div>
+</div>
+</div>
+</aside>
+<div class="w-full lg:w-3/4 xl:w-4/5">
+<div class="mb-8">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">الأكثر شعبية</h2>
+<a class="text-sm font-medium text-primary hover:underline" href="#">عرض الكل</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-gray-800/50 p-4 shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Ripe red tomatoes on the vine" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrEW7z2UwaJB2ccfdXeYkB4mhaeer6pk3dNcxmzC6LTzILU_Uz24teoATcsthXY-SHQHl47lSBUKMhE2iAcN0PwN1U9KfYiNFzFsTHDJEcjXGoay_lKZw7TW5-gG_qJGugsqneBS0AZL-INsjlVRkeMiDXqFiLdtjJjyxiOo68o3vnjjcCK2ZysaXAAov7yP14EReuOpJvVBlQHt6mfdELzjeN7yBvxhZG0pxar41FOjiVYCVYMZLJM59oAjJbiJijlH4TWL02N-A");'></div>
+</div>
+<div class="flex flex-col flex-grow mt-2">
+<p class="text-gray-900 dark:text-white text-lg font-semibold leading-normal">طماطم طازجة</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">مزارع خضراء</p>
+<div class="flex items-center gap-2 text-sm text-yellow-500 mt-2">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="font-medium text-gray-700 dark:text-gray-300">4.5</span>
+<span class="text-gray-400 dark:text-gray-500">| المتجر: 4.8</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center rounded-lg h-10 bg-primary/20 text-primary gap-2 text-sm font-bold leading-normal tracking-wide hover:bg-primary/30 transition-colors">
+<span>زيارة المتجر</span>
+<span class="material-symbols-outlined">storefront</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-gray-800/50 p-4 shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Fresh green organic cucumbers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQQ-S9MIZSPqOttXaMWh5U13g0ypme2vr7fXhqOgMV354btlWinj6W0OsZ5JNv2_BU0YAq--IWy_RevcVZ_VxLCOlSgtcLStVhg8yVcLav22IaJDYDrsSjr3g7l1pHdW6JzkasDzQ8Zswwdh7bLyDIHm0DaCVJEFwO7D9IybGJxbf36KW3fPz-3fG0tW0Z4cTyk9oUVl2tCdCQJWtt-BjRehdFOomSI1HNlKTB7fGGqpw92UdjPaakHxFFYZzO33qd2j1Hgq8UnCU");'></div>
+</div>
+<div class="flex flex-col flex-grow mt-2">
+<p class="text-gray-900 dark:text-white text-lg font-semibold leading-normal">خيار عضوي</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">زراعة الوادي</p>
+<div class="flex items-center gap-2 text-sm text-yellow-500 mt-2">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="font-medium text-gray-700 dark:text-gray-300">4.7</span>
+<span class="text-gray-400 dark:text-gray-500">| المتجر: 4.9</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center rounded-lg h-10 bg-primary/20 text-primary gap-2 text-sm font-bold leading-normal tracking-wide hover:bg-primary/30 transition-colors">
+<span>زيارة المتجر</span>
+<span class="material-symbols-outlined">storefront</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-gray-800/50 p-4 shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Crisp and sweet red apples" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmYTkH9vBxjol97puKhp7gNTgPrSjZVCgROuXHM24T9QCFHt41Jti77VXi5RBpCJRneeHM4dh0hIgdiUAnr5hF1_X0H7hp8HGYbYhDxqHVlCU1_tgClijWoBQ0sAvcG97TjWVm3-k0Tq1GGJ-cEHLnvf8aWCLZQ5ZFb-A0q26bSWjP04YxLE-XklLvY_atS7uwCtlArsyqCtc86x5wORvsoUdrOjaQoA2uFc_adEM7v3irghEdg-fZNdri4sLFA7qRWB6xLdRuq4A");'></div>
+</div>
+<div class="flex flex-col flex-grow mt-2">
+<p class="text-gray-900 dark:text-white text-lg font-semibold leading-normal">تفاح حلو</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">بساتين الشروق</p>
+<div class="flex items-center gap-2 text-sm text-yellow-500 mt-2">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="font-medium text-gray-700 dark:text-gray-300">4.8</span>
+<span class="text-gray-400 dark:text-gray-500">| المتجر: 4.7</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center rounded-lg h-10 bg-primary/20 text-primary gap-2 text-sm font-bold leading-normal tracking-wide hover:bg-primary/30 transition-colors">
+<span>زيارة المتجر</span>
+<span class="material-symbols-outlined">storefront</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-gray-800/50 p-4 shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Field of golden wheat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTothyJqY3KhqxeN70hSfx1EnMszmM3wEvLUbqV5z0OEutRWZCkp1Q5xIV3p_jP1wBgxejE3DXIK839n8rw2e6Mz8EGEcyPXtqNMe0uy1bdDmV6EcciLs4JacT6Nn88HNYgl3Em1YClKoBxN-Mdu8BDysZXchH25tqk-dvwe5hfNRIcjBw7ZfQLsTw4DPy9rpavy4D92NOKGdyGGWrt87LFy_S0Bbqn_5mV6LV7RMdyszVjeB18NuXsQ0HVROUDw9VuZO-R9vdOR0");'></div>
+</div>
+<div class="flex flex-col flex-grow mt-2">
+<p class="text-gray-900 dark:text-white text-lg font-semibold leading-normal">قمح ذهبي</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">شركة الحقول الذهبية</p>
+<div class="flex items-center gap-2 text-sm text-yellow-500 mt-2">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="font-medium text-gray-700 dark:text-gray-300">4.9</span>
+<span class="text-gray-400 dark:text-gray-500">| المتجر: 4.9</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center rounded-lg h-10 bg-primary/20 text-primary gap-2 text-sm font-bold leading-normal tracking-wide hover:bg-primary/30 transition-colors">
+<span>زيارة المتجر</span>
+<span class="material-symbols-outlined">storefront</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">جميع المنتجات</h2>
+<div class="flex items-center gap-2">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-gray-800 px-4 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors shadow-sm">
+<p class="text-sm font-medium leading-normal">الفرز حسب: الأحدث</p>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-gray-800/50 p-4 shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Fresh crisp lettuce heads" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLdgi10ZpoiYF-ONfOOCFdCDHL89O1J_VRNLgcgKH1MBGJf_YNzQ-O98izNlPKMoTyzewh7Z5mQFYP7ddoYFVyTVjgCF2ePMP9dyK7Hx7iyXtw5AYBPUysZkywA51eHvZt3wccdYbDLYRpTMaSfr-2qnB3ZgKwlKObuOgRXwv2LNMrPiN12Oa2UsCtANEvvJlaO8hMl566rYOOi6HAJ7Z0w7EPtqTAvoVf3PzQOYhyfQVKtf-AzI9K4PHbDjUrQ6dK6BLOWEN-HnE");'></div>
+</div>
+<div class="flex flex-col flex-grow mt-2">
+<p class="text-gray-900 dark:text-white text-lg font-semibold leading-normal">خس طازج</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">مزارع خضراء</p>
+<div class="flex items-center gap-2 text-sm text-yellow-500 mt-2">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="font-medium text-gray-700 dark:text-gray-300">4.6</span>
+<span class="text-gray-400 dark:text-gray-500">| المتجر: 4.8</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center rounded-lg h-10 bg-primary/20 text-primary gap-2 text-sm font-bold leading-normal tracking-wide hover:bg-primary/30 transition-colors">
+<span>زيارة المتجر</span>
+<span class="material-symbols-outlined">storefront</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-gray-800/50 p-4 shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Sweet yellow corn cobs" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDo6RYHuGuZnRx573dLszoUYAMSQE135Xnt2PE28Jfs9LDthOk03DXi1oHNValNizgD2AzvkXSgk2DArLwnxOfKEeMnVw9cF7ww2pumWXncyUP2flyQPpBSmRj-nhKAZEOB_u62i_1mbFwiq3SWAMS08Kv7t2GIX_139f1aRS2Tx8jGV-cu3LgRVJAUK767-Z4M0N6HdScnWKtdm9k13OTzsdGaEgV4HCF7p5fxdkzI2wEdca7ufhW9r2grZrwKH9PIxBwDIF4BSL8");'></div>
+</div>
+<div class="flex flex-col flex-grow mt-2">
+<p class="text-gray-900 dark:text-white text-lg font-semibold leading-normal">ذرة صفراء</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">زراعة الوادي</p>
+<div class="flex items-center gap-2 text-sm text-yellow-500 mt-2">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="font-medium text-gray-700 dark:text-gray-300">4.5</span>
+<span class="text-gray-400 dark:text-gray-500">| المتجر: 4.9</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center rounded-lg h-10 bg-primary/20 text-primary gap-2 text-sm font-bold leading-normal tracking-wide hover:bg-primary/30 transition-colors">
+<span>زيارة المتجر</span>
+<span class="material-symbols-outlined">storefront</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-gray-800/50 p-4 shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Juicy ripe oranges" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFRVLmS2qjTP-0eiOhSYngkboiHmhExsOcC3WOjMuTok9A8Xl56RceS45xsMe0IZyTKMrue_xoF4rRHhwOgCIlUWtLBR1qriiMpeWQmMAi1PBMTfalzYKBFuhUD8sVGxXx367Kbg0LeYus7RaugRjIPot7HFwkjVC88BXZIzdFbzj2_L37ZPf_dSXT-0D7niVZyKRnPlGJPMjqNta9_8r9pQDMm22D72whkUg-VcBtCXYZhYnR5WadpURjkdquN11SLruoT1jm4aA");'></div>
+</div>
+<div class="flex flex-col flex-grow mt-2">
+<p class="text-gray-900 dark:text-white text-lg font-semibold leading-normal">برتقال</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">بساتين الشروق</p>
+<div class="flex items-center gap-2 text-sm text-yellow-500 mt-2">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="font-medium text-gray-700 dark:text-gray-300">4.8</span>
+<span class="text-gray-400 dark:text-gray-500">| المتجر: 4.7</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center rounded-lg h-10 bg-primary/20 text-primary gap-2 text-sm font-bold leading-normal tracking-wide hover:bg-primary/30 transition-colors">
+<span>زيارة المتجر</span>
+<span class="material-symbols-outlined">storefront</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-gray-800/50 p-4 shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Freshly harvested carrots" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhNFx5L_lKiyb4MLOr_ebAkDAKhT9WWWjZ0RWeXDUYWDJ-_V58DAqTnwh6rENPLF-RWlKCgLecIfPyStC6MK3pLoLtlU880NmjnDp43tgvunhFlcaFYN_fM_GYA0LASOzoYV6Ysk3vLkvs7JFkvjpAP0nryfXbSo4JziZ2xNPaakXsKvgKbyJGK_ylVpdQkLNV9E5msCo-Xvkqrp-5zm5PqDdO3mPrN8f9BTjqQNdIkZeGJU3QYO2so7K_66eEW1jMMVzVTNgP2Hw");'></div>
+</div>
+<div class="flex flex-col flex-grow mt-2">
+<p class="text-gray-900 dark:text-white text-lg font-semibold leading-normal">جزر</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">زراعة الوادي</p>
+<div class="flex items-center gap-2 text-sm text-yellow-500 mt-2">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="font-medium text-gray-700 dark:text-gray-300">4.6</span>
+<span class="text-gray-400 dark:text-gray-500">| المتجر: 4.9</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center rounded-lg h-10 bg-primary/20 text-primary gap-2 text-sm font-bold leading-normal tracking-wide hover:bg-primary/30 transition-colors">
+<span>زيارة المتجر</span>
+<span class="material-symbols-outlined">storefront</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-12 flex justify-center">
+<nav aria-label="Pagination" class="flex items-center gap-2">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-primary text-white">1</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">2</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">3</button>
+<span class="text-gray-500">...</span>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">10</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>إدارة الحملات الإعلانية</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3fd411",
+              "background-light": "#f6f8f6",
+              "background-dark": "#142210",
+              "green-dark": "#2A643B",
+              "gold-accent": "#FFC107",
+              "gray-light-bg": "#F5F5F5",
+              "gray-dark-text": "#333333",
+            },
+            fontFamily: {
+              "display": ["Work Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Work Sans', 'Noto Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-dark-text dark:text-gray-light-bg">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col justify-between bg-white dark:bg-black/20 p-4 border-l border-gray-200 dark:border-gray-800">
+<div class="flex flex-col gap-4">
+<div class="flex gap-3 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="متجر الخضروات الطازجة logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCg1tUFTA5Sfxjw_Q0jxtGuVJmOpyJ2tuzZMZseoJ3hr7i2fiDUFmoXx1fsuGMV-6YTmgEbzAbx4t0PKKAME5WtG2Vt6DR9h5QOYsDx0F020Y2FJE7cewUDqPnoxeCXnNqIgkd2YjfwT5LEgq4qkuE-C2l6Yvk32R2-V-xmj1KZaYVUtREKzi02UweyBS9B0SkeHAzQQdTXFs_QOZoK_hV8v510ZFZOr88R49GdFREe16y6AJk-PfpVNWCGl51N-R7bs58ylXQfSTA");'></div>
+<div class="flex flex-col">
+<h1 class="text-base font-bold text-gray-dark-text dark:text-white">متجر الخضروات الطازجة</h1>
+<p class="text-sm font-normal text-green-dark dark:text-primary/80">ID: 12345</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-light-bg dark:hover:bg-gray-dark-text/20" href="#">
+<span class="material-symbols-outlined text-gray-dark-text dark:text-white">dashboard</span>
+<p class="text-sm font-medium text-gray-dark-text dark:text-white">لوحة التحكم</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-green-dark/10 dark:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-green-dark dark:text-primary">campaign</span>
+<p class="text-sm font-bold text-green-dark dark:text-primary">الحملات الإعلانية</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-light-bg dark:hover:bg-gray-dark-text/20" href="#">
+<span class="material-symbols-outlined text-gray-dark-text dark:text-white">bar_chart</span>
+<p class="text-sm font-medium text-gray-dark-text dark:text-white">التقارير</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-light-bg dark:hover:bg-gray-dark-text/20" href="#">
+<span class="material-symbols-outlined text-gray-dark-text dark:text-white">receipt_long</span>
+<p class="text-sm font-medium text-gray-dark-text dark:text-white">الفواتير</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-light-bg dark:hover:bg-gray-dark-text/20" href="#">
+<span class="material-symbols-outlined text-gray-dark-text dark:text-white">settings</span>
+<p class="text-sm font-medium text-gray-dark-text dark:text-white">الإعدادات</p>
+</a>
+</nav>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gold-accent text-gray-dark-text text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90">
+<span class="truncate">ترقية الباقة</span>
+</button>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+<div class="flex flex-col gap-2">
+<h1 class="text-4xl font-black tracking-[-0.033em] text-gray-dark-text dark:text-white">إدارة الحملات الإعلانية</h1>
+<p class="text-base font-normal text-green-dark dark:text-primary/80">أنشئ حملاتك وتابع أداءها للوصول إلى المزيد من العملاء.</p>
+</div>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-gold-accent px-5 py-2.5 text-sm font-bold text-gray-dark-text hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add_circle</span>
+<span>أنشئ حملة جديدة</span>
+</button>
+</div>
+<!-- SectionHeader: Performance Overview -->
+<h2 class="text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4 text-gray-dark-text dark:text-white">نظرة عامة على الأداء</h2>
+<!-- Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-gray-200 dark:border-gray-700 bg-white dark:bg-black/20">
+<p class="text-base font-medium text-gray-dark-text/80 dark:text-white/80">إجمالي الإنفاق</p>
+<p class="tracking-light text-2xl font-bold text-gray-dark-text dark:text-white">1,250 ريال</p>
+<p class="text-base font-medium text-green-600 dark:text-green-400">+15.2%</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-gray-200 dark:border-gray-700 bg-white dark:bg-black/20">
+<p class="text-base font-medium text-gray-dark-text/80 dark:text-white/80">إجمالي المشاهدات</p>
+<p class="tracking-light text-2xl font-bold text-gray-dark-text dark:text-white">85,300</p>
+<p class="text-base font-medium text-green-600 dark:text-green-400">+22.1%</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-gray-200 dark:border-gray-700 bg-white dark:bg-black/20">
+<p class="text-base font-medium text-gray-dark-text/80 dark:text-white/80">إجمالي النقرات</p>
+<p class="tracking-light text-2xl font-bold text-gray-dark-text dark:text-white">4,120</p>
+<p class="text-base font-medium text-green-600 dark:text-green-400">+18.5%</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-gray-200 dark:border-gray-700 bg-white dark:bg-black/20">
+<p class="text-base font-medium text-gray-dark-text/80 dark:text-white/80">متوسط معدل التحويل</p>
+<p class="tracking-light text-2xl font-bold text-gray-dark-text dark:text-white">4.8%</p>
+<p class="text-base font-medium text-red-600 dark:text-red-400">-1.2%</p>
+</div>
+</div>
+<!-- Charts -->
+<div class="flex flex-wrap gap-4 px-0 py-6 mb-4">
+<div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black/20 p-6">
+<p class="text-base font-medium text-gray-dark-text dark:text-white">أداء الحملات النشطة</p>
+<p class="tracking-light text-[32px] font-bold truncate text-gray-dark-text dark:text-white">4,120 نقرة</p>
+<div class="flex gap-1">
+<p class="text-base font-normal text-green-dark dark:text-primary/80">آخر 30 يوم</p>
+<p class="text-base font-medium text-green-600 dark:text-green-400">+18.5%</p>
+</div>
+<div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
+<svg fill="none" height="148" preserveaspectratio="none" viewbox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z" fill="url(#paint0_linear_chart)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#2A643B" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="paint0_linear_chart" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#2A643B" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#2A643B" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="flex justify-around">
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-green-dark dark:text-primary/70">الأسبوع 1</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-green-dark dark:text-primary/70">الأسبوع 2</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-green-dark dark:text-primary/70">الأسبوع 3</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-green-dark dark:text-primary/70">الأسبوع 4</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SectionHeader: Campaigns List -->
+<h2 class="text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4 text-gray-dark-text dark:text-white">قائمة حملاتك</h2>
+<!-- Campaigns Table -->
+<div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black/20 overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-right">
+<thead class="bg-gray-light-bg dark:bg-gray-dark-text/20">
+<tr>
+<th class="px-6 py-3 font-bold text-gray-dark-text dark:text-white" scope="col">اسم الحملة</th>
+<th class="px-6 py-3 font-bold text-gray-dark-text dark:text-white" scope="col">الحالة</th>
+<th class="px-6 py-3 font-bold text-gray-dark-text dark:text-white" scope="col">الميزانية</th>
+<th class="px-6 py-3 font-bold text-gray-dark-text dark:text-white" scope="col">المدة</th>
+<th class="px-6 py-3 font-bold text-gray-dark-text dark:text-white" scope="col">النقرات</th>
+<th class="px-6 py-3 font-bold text-gray-dark-text dark:text-white" scope="col">المشاهدات</th>
+<th class="px-6 py-3 font-bold text-gray-dark-text dark:text-white" scope="col">إجراءات</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-gray-200 dark:border-gray-700">
+<td class="px-6 py-4 font-medium text-gray-dark-text dark:text-white whitespace-nowrap">تخفيضات نهاية الأسبوع</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center text-xs font-semibold px-2.5 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100">نشطة</span>
+</td>
+<td class="px-6 py-4">500 ريال</td>
+<td class="px-6 py-4">15 - 20 يونيو</td>
+<td class="px-6 py-4">1,850</td>
+<td class="px-6 py-4">35,200</td>
+<td class="px-6 py-4 flex items-center gap-2">
+<button class="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-base">pause</span></button>
+<button class="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-base">monitoring</span></button>
+</td>
+</tr>
+<tr class="border-b border-gray-200 dark:border-gray-700">
+<td class="px-6 py-4 font-medium text-gray-dark-text dark:text-white whitespace-nowrap">محصول الطماطم الجديد</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center text-xs font-semibold px-2.5 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100">مجدولة</span>
+</td>
+<td class="px-6 py-4">300 ريال</td>
+<td class="px-6 py-4">25 - 30 يونيو</td>
+<td class="px-6 py-4">0</td>
+<td class="px-6 py-4">0</td>
+<td class="px-6 py-4 flex items-center gap-2">
+<button class="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-base">play_arrow</span></button>
+<button class="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-base">monitoring</span></button>
+</td>
+</tr>
+<tr class="border-b-0">
+<td class="px-6 py-4 font-medium text-gray-dark-text dark:text-white whitespace-nowrap">عرض رمضان</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center text-xs font-semibold px-2.5 py-0.5 rounded-full bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300">منتهية</span>
+</td>
+<td class="px-6 py-4">1000 ريال</td>
+<td class="px-6 py-4">1 - 30 مايو</td>
+<td class="px-6 py-4">2,270</td>
+<td class="px-6 py-4">50,100</td>
+<td class="px-6 py-4 flex items-center gap-2">
+<button class="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-base">replay</span></button>
+<button class="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-base">monitoring</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

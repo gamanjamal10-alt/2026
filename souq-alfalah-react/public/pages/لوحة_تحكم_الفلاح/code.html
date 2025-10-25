@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>لوحة تحكم الفلاح</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </body.rtl>
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3fd411",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#142210",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1a2c16",
+                        "text-light-primary": "#111b0d",
+                        "text-dark-primary": "#e1e3de",
+                        "text-light-secondary": "#5e9a4c",
+                        "text-dark-secondary": "#a2bba1",
+                        "border-light": "#d5e7cf",
+                        "border-dark": "#414941",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 sm:px-8 lg:px-10 py-3">
+<div class="flex items-center gap-4 text-text-light-primary dark:text-text-dark-primary">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">مزرعة الأمل</h2>
+</div>
+<div class="flex flex-1 justify-end gap-3 sm:gap-4">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-primary/20 text-text-light-primary dark:text-text-dark-primary hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPJnAjpriyhJa8yCr_z8O-1irwPF7_d7QOopFePeRLKx7_zXz8KF8fbAnjTxTvF_PfZD0G9huxm8aSgKItpdksWpQgbOxtwCG3TqqY11pjh_5lV1dYQCzs1W0qnC00OYxD-tPTVZq_-wyk4pQ2OBafxCkSW3gGlzJG8tZAJhfHZzxwGO9wEQprPrCDoYX3h1e147knl2sOX2DwUcqatnIZYmdp1Vw7Wo57hWkIXS7j9uUpbdfHu1LvBHIj_KWsT-Sp79SDA8CI2GA");'></div>
+</div>
+</header>
+<main class="px-4 sm:px-8 lg:px-10 py-5">
+<div class="layout-content-container flex flex-col w-full">
+<div class="p-4">
+<div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-5 sm:flex-row sm:items-center">
+<div class="flex flex-col gap-1">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-bold leading-tight">يتبقى 15 يومًا في الفترة التجريبية المجانية</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-base font-normal leading-normal">استمر في الوصول إلى جميع الميزات عن طريق الترقية.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#111b0d] text-sm font-bold leading-normal tracking-wide hover:opacity-90 transition-opacity">
+<span class="truncate">اشترك الآن</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 px-4 py-3">
+<div class="lg:col-span-2 flex flex-col gap-6">
+<!-- Product Management Section -->
+<section>
+<div class="flex items-center justify-between px-4 pb-3 pt-5">
+<h2 class="text-text-light-primary dark:text-text-dark-primary text-[22px] font-bold leading-tight tracking-[-0.015em]">إدارة المنتجات</h2>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-[#111b0d] gap-2 text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate">أضف منتج جديد</span>
+</button>
+</div>
+<div class="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-4 p-4">
+<div class="flex flex-col gap-3 pb-3 bg-card-light dark:bg-card-dark p-3 rounded-lg border border-border-light dark:border-border-dark">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-md" data-alt="Fresh red tomatoes on the vine" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDomsGQAWBv4IdZ90NFA8xbB4bIxBOpC9xz1NUfLGnvB1KC6Zx2MniYg6bvuHJENau1CvoFKNiycH69Ncsaq465hhjgWYazku6l_Ns7SOkvZK_pM8oZ5Tnlsd_fytHNiuNW3fFiGaf4lH4nXUUgrzyS8lQOGvhvzEWmZg9cv2zYnmHhcDHYVCw3MFOjQBvCx-AXT1nkLtA6P6SmhHamIDLShFtIS1DUYML525izkfZqfHfLVaZcFTgyPxTN-CqzxIboO_mJCS7z7ss");'></div>
+<div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal">طماطم</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">السعر: 5 ريال/كجم</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">المخزون: 150 كجم</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 bg-card-light dark:bg-card-dark p-3 rounded-lg border border-border-light dark:border-border-dark">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-md" data-alt="Crisp green cucumbers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRzfJW9aNm99AWi4EZNcxatXr2FYnipi6J0Zprj5rzqogDP6b6cNqKBeUh_n84XuQjeF4-wfPEgriqv-yM-GnkgXRZwlio7heGvAO3F_YtBS4ruVj22mKbOFZq4swaKYp4EOY605kNavENGXMp2JXFktOe3pNl-19biefiKus_7u-2G8ZD1T9YKVfgpStMpgrOSCs4l_fVhUXiS3wZQszU4lX5LYAh_DpokjKGbH9omGfdjJbVGxzgxW8GxGudkVuL3QBcBvUXnQI");'></div>
+<div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal">خيار</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">السعر: 3 ريال/كجم</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">المخزون: 200 كجم</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 bg-card-light dark:bg-card-dark p-3 rounded-lg border border-border-light dark:border-border-dark">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-md" data-alt="Bright orange carrots" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC51iLRAWcFJUx0t9DP7Vpk7cUiiQZ7Sv3RZHaex48CljJNdzkeXsusSsbSFIX4MbsDr7It-Yoyeq_U1-MdR1QlO-tpNu85Hu4FTRPV4p-6ZFIAek-xTzftu7AvBUxwkma7-fyAeILzlckUlsDgZ8KUxzS9aoVx5s8tkURcbMEYK707avdLP1jk6_dVYSq6RfV3F6xZB_yUwsG6cBbRaF70TdOq1Xs_J4MbKkWZLygZyM-YeJncf3Uywc8AQm9YRHFlnO2vvApBOjY");'></div>
+<div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal">جزر</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">السعر: 4 ريال/كجم</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">المخزون: 120 كجم</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 bg-card-light dark:bg-card-dark p-3 rounded-lg border border-border-light dark:border-border-dark">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-md" data-alt="Freshly harvested potatoes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4BAQPW6hKeJgrKFFyb-k5YP6i-4GxWTs__SdGdYepANG-eEwxwRMag4QQqWhUOeivj9YaaTc26-i4DupGeYMTkWYRx4Ni-kppeYLiAuft6KkdzMHMS2MtaMLN9UnTcwAZlKZcrJu6FHRJAE9MevZUdqmA72hfP6yjgGtfwaqPwOkzXe7BC8z4cAD2VJNMfNXETZm30cW3yN_7oY-dW3FyXd9DghWtDsXnl8x9Lr9HR--RPh9AZ_BIDMMBzkWgXcmFNixVV3qeuxw");'></div>
+<div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal">بطاطس</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">السعر: 2.5 ريال/كجم</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">المخزون: 300 كجم</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Order Tracking Section -->
+<section>
+<h2 class="text-text-light-primary dark:text-text-dark-primary text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">أحدث الطلبات</h2>
+<div class="p-4">
+<div class="overflow-x-auto bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark">
+<table class="w-full text-right">
+<thead class="border-b border-border-light dark:border-border-dark">
+<tr>
+<th class="p-4 text-sm font-bold text-text-light-secondary dark:text-text-dark-secondary">رقم الطلب</th>
+<th class="p-4 text-sm font-bold text-text-light-secondary dark:text-text-dark-secondary">اسم العميل</th>
+<th class="p-4 text-sm font-bold text-text-light-secondary dark:text-text-dark-secondary">الحالة</th>
+<th class="p-4 text-sm font-bold text-text-light-secondary dark:text-text-dark-secondary">المبلغ الإجمالي</th>
+<th class="p-4 text-sm font-bold text-text-light-secondary dark:text-text-dark-secondary">التاريخ</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-light dark:divide-border-dark">
+<tr class="text-text-light-primary dark:text-text-dark-primary hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+<td class="p-4 text-sm font-medium">#1254</td>
+<td class="p-4 text-sm font-medium">عبدالله محمد</td>
+<td class="p-4 text-sm font-medium"><span class="px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 text-xs font-bold">قيد التجهيز</span></td>
+<td class="p-4 text-sm font-medium">250 ريال</td>
+<td class="p-4 text-sm font-medium">2023-10-27</td>
+</tr>
+<tr class="text-text-light-primary dark:text-text-dark-primary hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+<td class="p-4 text-sm font-medium">#1253</td>
+<td class="p-4 text-sm font-medium">سارة علي</td>
+<td class="p-4 text-sm font-medium"><span class="px-2 py-1 rounded-full bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 text-xs font-bold">تم التوصيل</span></td>
+<td class="p-4 text-sm font-medium">175 ريال</td>
+<td class="p-4 text-sm font-medium">2023-10-26</td>
+</tr>
+<tr class="text-text-light-primary dark:text-text-dark-primary hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+<td class="p-4 text-sm font-medium">#1252</td>
+<td class="p-4 text-sm font-medium">خالد أحمد</td>
+<td class="p-4 text-sm font-medium"><span class="px-2 py-1 rounded-full bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300 text-xs font-bold">بانتظار الدفع</span></td>
+<td class="p-4 text-sm font-medium">320 ريال</td>
+<td class="p-4 text-sm font-medium">2023-10-25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar -->
+<aside class="lg:col-span-1 flex flex-col gap-6">
+<!-- Store Information Panel -->
+<section class="bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark p-6">
+<h3 class="text-text-light-primary dark:text-text-dark-primary text-lg font-bold mb-4">معلومات التواصل</h3>
+<div class="flex flex-col gap-4">
+<a class="flex items-center gap-3 p-3 rounded-lg bg-background-light dark:bg-background-dark hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="tel:+966501234567">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary">call</span>
+<span class="text-text-light-primary dark:text-text-dark-primary font-semibold text-left" dir="ltr">+966 50 123 4567</span>
+</a>
+<a class="flex items-center justify-center gap-3 p-3 rounded-lg text-white bg-[#25D366] hover:opacity-90 transition-opacity" href="https://wa.me/966501234567" target="_blank">
+<svg class="bi bi-whatsapp" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+</svg>
+<span class="font-bold">تواصل عبر واتساب</span>
+</a>
+</div>
+</section>
+<!-- Notifications/Alerts Panel -->
+<section class="bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark p-6">
+<h3 class="text-text-light-primary dark:text-text-dark-primary text-lg font-bold mb-4">آخر التنبيهات</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-3">
+<div class="mt-1 flex-shrink-0 size-5 rounded-full bg-green-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-green-500">shopping_cart</span>
+</div>
+<div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium">طلب جديد من أسواق المزرعة</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs">منذ 5 دقائق</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="mt-1 flex-shrink-0 size-5 rounded-full bg-yellow-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-yellow-500">inventory_2</span>
+</div>
+<div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium">تنبيه: مخزون الجزر على وشك النفاد</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs">منذ 30 دقيقة</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="mt-1 flex-shrink-0 size-5 rounded-full bg-blue-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-blue-500">local_shipping</span>
+</div>
+<div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium">تم شحن الطلب #1254</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs">منذ ساعتين</p>
+</div>
+</div>
+</div>
+</section>
+</aside>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
